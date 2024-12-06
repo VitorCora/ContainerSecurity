@@ -108,6 +108,25 @@ The following commands are available:
 
 The Scan command requires that an **artifact** and a **scanner** or **scanner Flag** be provided
 
+The **artifact** entry could be:
+
+| Command  | Description |
+| ------------- | ------------- |
+| docker:yourrepo/yourimage:tag | Use images from the Docker daemon. |
+| podman:yourrepo/yourimage:tag | Use images from the Podman daemon. |
+| docker-archive:path/to/yourimage.tar | Use a tarball from disk for archives created from docker save. |
+| oci-archive:path/to/yourimage.tar | Use a tarball from disk for OCI archives (from Skopeo or otherwise). |
+| oci-dir:path/to/yourimage | Read directly from a path on disk for OCI layout directories (from Skopeo or otherwise). |
+| singularity:path/to/yourimage.sif | Read directly from a Singularity Image Format (SIF) container on disk. |
+| registry:yourrepo/yourimage:tag | Pull image directly from a registry (no container runtime required). |
+| dir:path/to/yourproject | Read directly from a path on disk (any directory). |
+| file:path/to/yourproject/file | Read directly from a path on disk (any single file). |
+
+Using the dir artifact, the TMAS scanner will look for a manifest on the target folder, it will not scanner multiple images present in the that target directory, it will be taken care later by an example program later on this repo.
+
+This program can be found on the following path as well:
+  - https://github.com/VitorCora/ContainerSecurity/tmasdirscanner.sh
+
 The **scanner Flag** entry could be:
 
 | scanner  | Description |
@@ -147,18 +166,21 @@ tmas scan vulnerabilities docker:vulnerables/web-dvwa
 
 ## Flags
 
+The following Flags are available to be used with the CLI tool
 
-
-You can alternatively also invoke the CLI tool as follows:
-
-```
-tmas scan {scanner} {artifact} {Flags}
-```
-
-The **scanner** entry could be 
-
-
-By default, the 
+| Flag  | Description |
+| ------------- | ------------- |
+| -p, --platform | Specify platform for multi-platform container image sources. For example: linux/arm64,  linux/arm64/v8, arm64, linux.
+Default is linux/amd64. |
+| -r, --region | Trend Vision One service regions: ap-southeast-2, eu-central-1, ap-south-1, ap-northeast-1, ap-southeast-1, us-east-1.
+Default is us-east-1. |
+| -V, --vulnerabilities | Enable scanning for vulnerabilities (optional). |
+| -M, --malware | Enable scanning for malware (optional). Supports docker, docker-archive, oci-archive, oci-dir and registry artifact types. |
+| -S, --secrets | Enable scanning for secrets (optional). |
+| -o, --override | Specify the file path to the file containing the vulnerability and secret override rules (optional). For example: /path/to/tmas_overrides.yml. |
+| --saveSBOM | Save SBOM in the local directory (optional). |
+| -v, --verbose | Increase verbosity (-v = info, -vv = debug). |
+| -h, --help | Display help information. |
 
 
 # Using a CLI code to find all the images and 
