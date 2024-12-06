@@ -2,7 +2,33 @@
 
 # TMAS Vulnerability Scanning
 
-## Scan all the images on a $DIRECTORY (path/folder)
+Trend Micro Artifact Scanner (TMAS) performs pre-runtime image, vulnerability, malware, and secret scans on artifacts, enabling you to identify and fix issues before they reach a production environment, like Kubernetes for container images.
+
+Supported Artifacts
+
+| Supported operating systems  | 
+| ------------- | 
+| Alpine | 
+| Amazon Linux |
+| BusyBox |
+| CentOS |
+| Debian |
+| Distroless |
+| Oracle Linux |
+| Red Hat (RHEL) |
+| Ubuntu |
+
+| Supported programming languages |
+| ------------- |
+| Java (JAR, WAR, EAR, JPI, HPI) |
+| JavaScript (NPM, Yarn) |
+| Python (Egg, Wheel, Poetry, requirements.txt/setup.py files) |
+| Dotnet (deps.json) |
+| Golang (go.mod) |
+| PHP (Composer) |
+| Rust (Cargo) |
+
+## Scaning images with TMAS
 
 This scenario is focused in covering on demand vulnerability scan for all the most common software images hosted on a path.
 
@@ -220,10 +246,6 @@ for file in "${files[@]}"; do
 done
 ```
 
-## Secret Scanning
-
-
-
 ## References
 
 TMAS main documentation page:
@@ -241,5 +263,7 @@ TMAS overrides for vulnerabilities and secret findings:
 TMAS examples:
   - https://docs.trendmicro.com/en-us/documentation/article/trend-vision-one-tmas-examples#GUID-F8FAF1DF-7A1E-4C0A-ADA3-6F6FC6CAD49D-diki85
 
+Integrating TMAS results with a CICD pipeline:
+  - https://docs.trendmicro.com/en-us/documentation/article/trend-vision-one-artifact-scanner-results-policies
 
 
