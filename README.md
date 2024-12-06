@@ -13,8 +13,10 @@ This method does not require further access to the Vision One
 - How to create the Vision One API that will be used on the
   - Log into Vision One.
   - On the Vision One Console go to the **Administration** Page and select the **User Roles** Service:
+    - ![Screenshot 2024-12-06 at 1 44 01 PM](https://github.com/user-attachments/assets/f533842b-6c3e-4443-850b-908af35bb5c6)
     - Click on **+Add Role**
-    - ![Screenshot 2024-12-06 at 1 39 25 PM](https://github.com/user-attachments/assets/77e07e95-aa8f-4253-b301-c872289b67f2)
+    - ![Screenshot 2024-12-06 at 1 43 40 PM](https://github.com/user-attachments/assets/408ca305-8e7c-4d0b-833c-6d42c1c9a79f)
+
     - On the **Create Custom Role** Page
     - Under General Information:
       - Choose a **Role Name**: eg. v1-tmas-role.
@@ -29,6 +31,7 @@ This method does not require further access to the Vision One
     - Click **Save**
   - On the Vision One Console go to the **Administration** Page and select the **API Keys** Service:
     - Click on **Add API Key**
+    - ![Screenshot 2024-12-06 at 1 39 25 PM](https://github.com/user-attachments/assets/77e07e95-aa8f-4253-b301-c872289b67f2)
     - Choose a **Name**: eg. v1-tmas-api.
     - Choose the recently created role: eg. v1-tmas-api.
     - Set an **Expiration time**
