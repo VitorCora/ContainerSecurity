@@ -14,12 +14,12 @@ This method does not require further access to the Vision One
   - Log into Vision One.
   - On the Vision One Console go to the **Administration** Page and select the **User Roles** Service:
     - Click on **+Add Role**
-    - ![image](https://github.com/VitorCora/FileStorageScanning/assets/59590152/507febba-7b19-4d7c-b45f-4cdc1daf6556)
+    - ![Screenshot 2024-12-06 at 1 39 25 PM](https://github.com/user-attachments/assets/77e07e95-aa8f-4253-b301-c872289b67f2)
     - On the **Create Custom Role** Page
     - Under General Information:
       - Choose a **Role Name**: eg. v1-tmas-role.
       - Add a **Role Description**: eg. Role to enable SaaS malware scan to be performed
-      - ![image](https://github.com/VitorCora/FileStorageScanning/assets/59590152/5ee998c8-744a-4eea-ad4d-b284d6064cfb)
+      - ![Screenshot 2024-12-05 at 4 36 38 PM](https://github.com/user-attachments/assets/606d4975-f5c3-4547-85a6-5f9992391bbb)
     - Under Permission, select only
       -   Under **Security Functions**
         - Expand **Cloud Security**
@@ -34,7 +34,7 @@ This method does not require further access to the Vision One
     - Set an **Expiration time**
     - Choose a **Description** (Optional): eg. API Key to enable vulnerability scan to be performed 
       - Add a **Role Description**: eg. API Key to enable vulnerability scan to be performed
-      - ![image](https://github.com/VitorCora/FileStorageScanning/assets/59590152/888e4704-b4f9-4a21-8d9f-5bfe6bf1ed22)
+      - ![Screenshot 2024-12-06 at 1 42 11 PM](https://github.com/user-attachments/assets/6179f577-a644-4a36-baf8-f77322a54f62)
       - Click **Add**
   - Copy the given API and store it properly 
 
