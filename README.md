@@ -43,9 +43,6 @@ This method does not require further access to the Vision One
   - On the Vision One Console expand the **Cloud Security** Service and then expand the **Cloud Security** Service and select **Container Protection**:
   - Click on the Tab **Container Image Scanning**
   - ![Screenshot 2024-12-05 at 4 51 09 PM](https://github.com/user-attachments/assets/945fa9e9-50b7-4d5e-8738-15e268972511)
-  - https://portal.xdr.trendmicro.com/index.html#/app/file-security
-  - For the results go to the **Scan Activity** Tab
-  - ![image](https://github.com/VitorCora/FileStorageScanning/assets/59590152/56f4c454-0974-416f-8e1a-4c12c5eeaf68)
 
 # Installing the TMAS CLI tool
 
@@ -182,14 +179,19 @@ Default is us-east-1. |
 | -v, --verbose | Increase verbosity (-v = info, -vv = debug). |
 | -h, --help | Display help information. |
 
+## Saving results to a file
 
-# Using a CLI code to find all the images and 
+By default, the TMAS CLI tool will not save the scan results to a file, only presenting them in the CLI and sharing the content with the linked Vision One account, so the following is recommended when running it, if a json file is needed:
+  eg. Scanning for **vulnerabilities and secrets** on an image and saving the results as a file named **scan_results_${imagename}.json**
+
+```
+tmas scan file:/${imagefolder}/${imagename} -VS > "scan_results_${imagename}.json
+```
+
+## Using a CLI code to find all the images on a folder and scan all of them
 
 Under construction
 
-## Installing the SDK
-  
-Under construction
 
 ## References
 
