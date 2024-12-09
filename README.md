@@ -85,7 +85,11 @@ mkdir tmas
 Download the right package in the instance/microservice that will run the vulnerability analysis and save it to the tmas folder
   eg. for linux
 ```
-wget -0 tmas/trendmicro_tmas_cli.tar.gz   https://cli.artifactscan.cloudone.trendmicro.com/tmas-cli/latest/tmas-cli_Linux_x86_64.tar.gz tmas
+wget https://cli.artifactscan.cloudone.trendmicro.com/tmas-cli/latest/tmas-cli_Linux_x86_64.tar.gz -P tmas/trendmicro_tmas_cli.tar.gz
+```
+Go to folder tmas
+```
+cd tmas
 ```
 Extract and install the tmas package
 ```
@@ -97,6 +101,7 @@ Input the API Key acquired previusly
 ```
 export API_KEY_TMAS={Api_Key_Value}
 ```
+
 
 Add the tmas to the $PATH
   - export PATH="/path/to/tmas/binary/directory:$PATH"
@@ -242,9 +247,34 @@ for file in "${files[@]}"; do
     echo "Processing $file"
     # Replace slashes with underscores for the output file name
     output_file=$(echo "$file" | tr '/' '_')
-    tmas scan file:"$file" -V -vv > "scan_result_${output_file}.json"
+    tmas scan file:"$file" -V > "scan_result_${output_file}.json"
 done
+
+cd ~
 ```
+
+## Screenshots
+
+Folder **image**, where the images are hosted:
+
+![Screenshot 2024-12-09 at 1 50 01 PM](https://github.com/user-attachments/assets/1eb052a2-e56b-4fa5-b055-1449932ea0c5)
+
+Running script, Scanning images on folder **image**:
+
+![Screenshot 2024-12-09 at 2 04 20 PM](https://github.com/user-attachments/assets/e9ee50f1-7ef8-4ae8-9d48-cb9f5068b30f)
+
+Folder **image**, after images are scanned:
+
+![Screenshot 2024-12-09 at 2 33 45 PM](https://github.com/user-attachments/assets/60961b4f-ca28-4460-845f-ea09a80e36b4)
+
+Output for first **image**. **web-dvwa**:
+
+![Screenshot 2024-12-09 at 2 01 25 PM](https://github.com/user-attachments/assets/bf401538-333f-40b9-af08-27741e9ed853)
+
+Output for first **image**. **web-dvwa2**:
+
+![Screenshot 2024-12-09 at 2 01 11 PM](https://github.com/user-attachments/assets/48998629-ea00-407c-a7c5-6b07d75029d4)
+
 
 ## References
 
